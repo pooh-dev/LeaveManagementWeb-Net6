@@ -32,7 +32,7 @@ namespace LeaveManagement.Web.Repositories
         public async Task<bool> ExistsByIdAsync(int id)
         {
             var entity = await GetAsync(id);
-            return entity != null;
+            return entity is not null;
         }
 
         public async Task<List<T>> GetAllAsync()
